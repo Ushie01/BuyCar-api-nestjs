@@ -1,6 +1,5 @@
 import { AfterInsert, AfterRemove, AfterUpdate, Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-
 @Entity()
 export class User {
       @PrimaryGeneratedColumn()
@@ -15,15 +14,5 @@ export class User {
       @AfterInsert()
       logInsert() {
             console.log('Inserted user with', this.id)
-      }
-
-      @AfterUpdate()
-      logUpdate() {
-            console.log('Updated User with id', this.id)
-      }
-
-      @AfterRemove()
-      logRemove() {
-            console.log('Remove User with id', this.id)
       }
 }
